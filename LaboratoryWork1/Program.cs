@@ -1,6 +1,13 @@
-var builder = WebApplication.CreateBuilder(args);
-var app = builder.Build();
+using LaboratoryWork1.Tasks.Task1;
 
-app.MapGet("/", () => "Hello World!");
+namespace LaboratoryWork1;
 
-app.Run();
+class Program
+{
+    static void Main(string[] args)
+    {
+        var solver = new Task1Solver();
+        var result = solver.Solve();
+        solver.PrintResult(result);
+    }
+}
