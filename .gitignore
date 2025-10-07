@@ -521,6 +521,7 @@ FodyWeavers.xsd
 *.msm
 *.msp
 
-# JetBrains Rider
+# Users files
+.tasks
 
 # End of https://www.toptal.com/developers/gitignore/api/csharp,aspnetcore
