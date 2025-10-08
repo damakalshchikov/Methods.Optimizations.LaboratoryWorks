@@ -74,30 +74,6 @@ public class BisectionMethod : IOptimizationMethod
 
             if (nextIntervalLength <= epsilon)
             {
-                // Добавить финальный шаг
-                k++;
-                double xcFinal = xcNext;
-                double fXcFinal = function.Calculate(xcFinal);
-                double yFinal = akNext + nextIntervalLength / 4;
-                double zFinal = bkNext - nextIntervalLength / 4;
-                double fYFinal = function.Calculate(yFinal);
-                double fZFinal = function.Calculate(zFinal);
-
-                result.Steps.Add(new OptimizationStep
-                {
-                    Iteration = k,
-                    A = akNext,
-                    B = bkNext,
-                    Xc = xcFinal,
-                    Y = yFinal,
-                    Z = zFinal,
-                    FXc = fXcFinal,
-                    FY = fYFinal,
-                    FZ = fZFinal,
-                    IntervalLength = nextIntervalLength
-                });
-                k--;
-
                 result.OptimalX = xcNext;
                 result.OptimalValue = function.Calculate(xcNext);
                 result.FinalIntervalStart = akNext;
