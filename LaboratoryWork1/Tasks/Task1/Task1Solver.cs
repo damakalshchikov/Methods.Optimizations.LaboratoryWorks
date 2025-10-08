@@ -27,7 +27,7 @@ public class Task1Solver
 
     public void PrintResult(OptimizationResult result)
     {
-        Console.WriteLine("=== Метод половинного деления ===");
+        Console.WriteLine("=== Задание №1 ===");
         Console.WriteLine(_function.Name);
         Console.WriteLine($"Интервал: [-1; 3]");
         Console.WriteLine($"Точность: ε = 0.3");
